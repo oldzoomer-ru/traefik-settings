@@ -10,6 +10,7 @@ services:
       - traefik
     command: |
       --providers.docker=true
+      --providers.docker.network=traefik
       --entrypoints.web.address=:80
       --entrypoints.web.http.redirections.entryPoint.to=websecure
       --entrypoints.web.http.redirections.entryPoint.scheme=https
